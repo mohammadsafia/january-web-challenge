@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&family=Heebo:wght@300;400;500;600;700&display=swap");
+@import "../abstracts/variables";
 
 * {
   box-sizing: border-box;
@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: $main-font;
 }
 
 .dark-gray-text {
