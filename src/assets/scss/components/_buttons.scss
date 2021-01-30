@@ -1,0 +1,53 @@
+@import "../abstracts/variables";
+
+.custom-btn {
+  width: 170px;
+  height: 45px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 6s ease-in-out;
+  position: relative;
+  display: inline-block;
+  box-shadow:inset 2px 2px 2px 0px $red,
+  7px 7px 20px 0px rgba(0,0,0,.1),
+  4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+.btn-red {
+  border: none;
+  background: $red;
+  background: linear-gradient(0deg,$red 0%, $red 100%);
+  color: #fff;
+  overflow: hidden;
+
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+  &:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    animation: shiny-red 2s ease-in-out infinite;
+  }
+  &:hover{
+    opacity: .7;
+  }
+  &:active{
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.2),
+      inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+  }
+}

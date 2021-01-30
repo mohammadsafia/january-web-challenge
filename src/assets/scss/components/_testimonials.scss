@@ -1,0 +1,59 @@
+@import "../abstracts/variables";
+
+#testimonials {
+  margin: 4rem 0;
+  .testimonials__title {
+     text-align: center;
+  }
+  .testimonials__cards {
+    &__card {
+      &__wrapper {
+        cursor: pointer;
+        padding: 1.5rem;
+        border:1px solid #ddd;
+        border-radius: 7px;
+        margin-bottom: 1rem;
+        transition: all 0.3s;
+        &:hover {
+          transform: translateY(-1rem) scale(0.9);
+        }
+      }
+     
+    
+      &__stars span:not(:first-child) {
+        margin-left: 1rem;
+      }
+      &--media {
+        display: flex;
+        align-items: center;
+      }
+      &--media  img {
+        border-radius: 50%;
+        object-fit: contain;
+        width: 50px;
+        margin-right: 1.2rem;
+      }
+    }
+
+    @include respond(laptop) {
+      .card-1{
+        margin-top: 1rem;
+      }
+      .card-2{
+        margin-top: -1rem;
+      }
+      .card-3{
+        margin-top: 2rem;
+      }
+      .card-4{
+        margin-top: -1rem;
+      }
+      .card-5{
+        margin-top:-3rem;
+      }
+      .card-6{
+        margin-top:0;
+      }
+    }
+  }
+}

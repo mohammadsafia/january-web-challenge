@@ -1,0 +1,42 @@
+@import "../abstracts/variables";
+
+#product-overview {
+  @include respond(laptop) {
+    background-image: url('../../images/hero-img.svg'), url('../../images/hero-shape.svg');
+    background-position: right bottom, -8% bottom;
+    background-size: contain, 22%;
+    width: 100%;
+    height: 721px;
+  }
+  @include respond(tab-land) {
+    background-image: url('../../images/hero-img.svg'), url('../../images/hero-shape.svg');
+    background-position: right 10%, -8% bottom;
+    background-size: 55%, 22%;
+    height: 640px;
+  }
+  @include respond(tab-port) {
+    background-image: url('../../images/hero-img.svg');
+    background-position: right 10%;
+    background-repeat: no-repeat;
+    background-size: 57%;
+    height: 576px;
+  }
+
+  @include respond(phone) {
+    background-image: url('../../images/hero-img.svg');
+    background-position: right 30rem;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 875px;
+  }
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 721px;
+  position: relative;
+  .row {
+    height: 540px;
+    .product-overview__description {
+      margin: auto 0;
+    }
+  }
+}

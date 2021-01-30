@@ -1,0 +1,57 @@
+@import "../abstracts/variables";
+.main-header {
+  &__brand {
+    text-decoration: none;
+    height: 50px;
+    display: inline-block;
+    & img {
+      height: 100%;
+    }
+  }
+  .navbar {
+    padding-top: 1rem;
+    .navbar-brand {
+      margin-right: 2rem;
+      img {
+        object-fit: contain;
+      }
+    }
+    .main-header__navbar-nav {
+      .main-header__nav-item {
+        .main-header__nav-link {
+          position: relative;
+          display: block;
+          text-decoration: none;
+          transition: 0.5s;
+          color: $dark-gray;
+          padding-right: 2rem;
+          font-weight:500;
+          @include respond(phone) {
+            padding-bottom: 10px;
+          }
+          &::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 3px;
+            top: 100%;
+            left: 0;
+            background: $red;
+            transition: transform 0.5s;
+            transform: scaleX(0);
+            transform-origin: right;
+          }
+          &:hover {
+            color: $red;
+            cursor: pointer;
+            transition: color ease-out 0.3s;
+          }
+          &:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+        }
+      }
+    }
+  }
+}

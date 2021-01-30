@@ -1,0 +1,42 @@
+@import "../abstracts/variables";
+
+#about-us {
+  margin: 4rem 0;
+  .about-us__image-container img {
+    width: 90%;
+    object-fit: contain;
+  }
+  .about-us__description-container {
+    .about-us__rating {
+      margin: 2rem 0;
+    }
+    .about-us__rating > p {
+        margin-right: 1rem;
+    }
+    .about-us__statistics {
+      padding: 10px;
+      background: $red;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      color: $white;
+      border: 1px solid transparent;
+      border-radius: 7px;
+    }
+    .about-us__statistics li > div{
+      display: flex;
+      flex-direction: column;
+      font-weight: 700;
+      font-size: $default-font-size + 0.3;
+      @include respond(tab-port) {
+        font-size: $default-font-size - 0.2 ;
+      }
+    }
+    .about-us__statistics__border-right{
+      @include respond(laptop) {
+        border: 1px solid $white;
+        height: 60px;
+      }
+    }
+  }
+}

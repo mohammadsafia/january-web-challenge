@@ -1,0 +1,113 @@
+@import "../abstracts/variables";
+
+#footer {
+  @include respond (laptop) {
+    background-image: url('../../images/footer-left.svg'), url('../../images/footer-right.svg');
+    background-position: left bottom, right bottom;
+    background-repeat: no-repeat, no-repeat;
+    height: 400px;
+  }
+  width: 100%;
+  background-color: $black;
+  height: 100%;
+  position: relative;
+  
+  .footer__wrapper {
+    padding-top: 5rem;
+    &__list {
+      color:$white;
+      &--header {
+        margin-bottom: 2rem;
+        font-weight: bolder;
+        -webkit-background-clip: text;
+        transition: 1s all;
+        &:hover{
+          color: transparent;
+          background-image: linear-gradient(to right, $red, $black, $orange);
+        }
+      }
+      &--label{
+        position: relative;
+        display: block;
+        text-decoration: none;
+        transition: 0.5s;
+        color: $white;
+        padding-right: 2rem;
+        font-weight:500;
+        &::after {
+          position: absolute;
+          content: "";
+          width: 50%;
+          height: 3px;
+          top: 100%;
+          left: 0;
+          background: $red;
+          transition: transform 0.5s;
+          transform: scaleX(0);
+          transform-origin: right;
+        }
+        &:hover {
+          color: $red;
+          cursor: pointer;
+          transition: color ease-out 0.3s;
+        }
+        &:hover::after {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+      }
+    }
+    &__list li {
+      padding:0.25rem
+    }
+    &__supported-stores {
+      margin-top: 1.4rem;
+      color: $white;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      border: 1px solid $white;
+      border-radius: 10px;
+      padding: .5rem;
+      width: 10rem;
+      &--description {
+        display: flex;
+        flex-direction: column;
+        &--s-label {
+          font-size: 11px;
+        }
+        &--xl-label {
+          font-size: 17px;
+          font-weight: 600;
+        }
+      }
+     
+    }
+  }
+
+  .footer__up {
+    cursor: pointer;
+    position: absolute;
+    background-color: $red;
+    color: white;
+    padding: 0.5rem;
+    z-index: 10;
+    border-radius: 10px;
+    @include respond(laptop) {
+      top: 84%;
+      left: 96%;
+    }
+    @include respond(tab-port) {  
+      top: 83%;
+      left: 94%;
+    }
+    @include respond(tab-land) {
+      top: 83%;
+      left: 92%;
+    }
+    @include respond(phone) {
+      top: 94%;
+      left: 84%;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import "../abstracts/variables";
+
+#delivery-services {
+  @include respond(laptop) {
+    margin: 4rem 0 ;
+  }
+ 
+  .delivery-services__title {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  .delivery-services__title > h3 {
+    font-weight: 800;
+  }
+
+  .delivery-services__cards {
+    &__card {
+      &__img {
+        width: 80px;
+        object-fit: contain;
+        margin-bottom: 1.5rem;
+      }
+      &__label {
+        font-size: $default-font-size + 0.2;
+        font-weight: 800;
+      }
+    }
+  }
+}

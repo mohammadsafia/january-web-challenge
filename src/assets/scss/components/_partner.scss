@@ -1,0 +1,13 @@
+@import "../abstracts/variables";
+
+#partner {
+  img {
+    cursor: pointer;
+    object-fit: contain;
+    opacity: 0.5;
+    transition: 1s all;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

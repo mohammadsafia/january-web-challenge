@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&family=Heebo:wght@300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.dark-gray-text {
+  color: $dark-gray
+}
+.red-text {
+  color: $red
+}
+.black-text {
+  color: $black
+}
+.orange-text {
+  color: $orange
+}
+
+.scale-icon{
+  transition: 1s all;
+  &:hover {
+    transform: scale(1.1)
+  }
+  &:active {
+    transform: scale(1.1)
+  }
+}
+
+.c-margin-top-8{
+  margin-top: 8rem;
+}
+
+.heading-secondary {
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 700;
+  display: inline-block;
+  -webkit-background-clip: text;
+  color: $black;
+  transition: all .2s;
+
+  @include respond(tab-port) {
+    font-size: 1.6rem;
+  }
+
+  @include respond(phone) {
+    font-size: 1.2rem;
+  }
+  &:hover {
+      color: transparent;
+      background-image: linear-gradient(to right, $orange, $black);
+      transform: skewY(2deg) skewX(15deg) scale(1.1);
+      text-shadow: .5rem 1rem 2rem rgba($black, .2);
+  }
+}
+
+.main-heading {
+  cursor: pointer;
+  font-weight: 700;
+  -webkit-background-clip: text;
+  color: $black;
+  transition: all .2s;
+  &:hover {
+      color: transparent;
+      background-image: linear-gradient(to right, $red, $black);
+      text-shadow: .5rem 1rem 2rem rgba($black, .2);
+  }
+}
+
+
+.sm-title {
+  color: $red;
+  font-weight: 600;
+  font-size: $default-font-size + .5;
+}
