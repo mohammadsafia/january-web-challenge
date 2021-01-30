@@ -3,10 +3,10 @@
 .custom-btn {
   width: 170px;
   height: 45px;
-  color: #fff;
+  color: $white;
   border-radius: 5px;
   padding: 10px 25px;
-  font-family: 'Lato', sans-serif;
+  font-family: inherit;
   font-weight: 500;
   background: transparent;
   cursor: pointer;
@@ -23,12 +23,12 @@
   border: none;
   background: $red;
   background: linear-gradient(0deg,$red 0%, $red 100%);
-  color: #fff;
+  color: $white;
   overflow: hidden;
 
   &:hover {
     text-decoration: none;
-    color: #fff;
+    color: $white;
   }
   &:before {
     position: absolute;
@@ -38,7 +38,7 @@
     left: 0;
     width: 30px;
     height: 100%;
-    background-color: #fff;
+    background-color: $white;
     animation: shiny-red 2s ease-in-out infinite;
   }
   &:hover{
