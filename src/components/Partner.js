@@ -12,16 +12,16 @@ const Partner = () => {
       <Container>
         <div className="row">
           <div data-aos="fade-down" data-aos-duration="1000" className="col-lg-3 col-md-6 col-sm-12 text-center">
-            <img src={partner1} alt="partner1" />
+            <img className="scale-icon" src={partner1} alt="partner1" />
           </div>
           <div data-aos="fade-down" data-aos-duration="2000" className="col-lg-3 col-md-6 col-sm-12 text-center">
-            <img src={partner2} alt="partner2" />
+            <img className="scale-icon" src={partner2} alt="partner2" />
           </div>
           <div data-aos="fade-down" data-aos-duration="2000" className="col-lg-3 col-md-6 col-sm-12 text-center">
-            <img src={partner3} alt="partner3" />
+            <img className="scale-icon" src={partner3} alt="partner3" />
           </div>
           <div data-aos="fade-down" data-aos-duration="2000" className="col-lg-3 col-md-6 col-sm-12 text-center">
-            <img src={partner4} alt="partner4" />
+            <img className="scale-icon" src={partner4} alt="partner4" />
           </div>
         </div>
       </Container>

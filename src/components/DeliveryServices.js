@@ -6,11 +6,11 @@ const DeliveryServices = () => {
   AOS.init();
   return (
     <section id="delivery-services">
-      <div className="delivery-services__title">
-        <p className="sm-title">{deliveryServicesData.smTitle}</p>
-        <h3 className="heading-secondary">{deliveryServicesData.bigTitle}</h3>
-      </div>
       <Container>
+        <div className="delivery-services__title">
+          <p className="sm-title">{deliveryServicesData.smTitle}</p>
+          <h3 className="heading-secondary">{deliveryServicesData.bigTitle}</h3>
+        </div>
         <div className="row delivery-services__cards">
           {deliveryServicesData.products.map(product => (
             <div data-aos={product.dataAos} data-aos-duration={product.duration} key={product.id} className="delivery-services__cards__card col-lg-4 col-md-6 col-sm-12">
